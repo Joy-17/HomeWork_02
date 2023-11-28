@@ -115,16 +115,33 @@ public class HW_4 {
 	}
 
 	public static void score() {
-		int [][] score = {
-				{10,35,40,100,90,85,75,70},
-				{37,75,77,89,64,75,70,95},
-				{100,70,79,90,75,70,79,90},
-				{77,95,70,89,60,75,85,89},
-				{98,70,89,90,75,90,89,90},
-				{90,80,100,75,50,20,99,75}
-		};
-		
-		
-		
+
+		int[] t1 = { 10, 35, 40, 100, 90, 85, 75, 70 };
+		int[] t2 = { 37, 75, 77, 89, 64, 75, 70, 95 };
+		int[] t3 = { 100, 70, 79, 90, 75, 70, 79, 90 };
+		int[] t4 = { 77, 95, 70, 89, 60, 75, 85, 89 };
+		int[] t5 = { 98, 70, 89, 90, 75, 90, 89, 90 };
+		int[] t6 = { 90, 80, 100, 75, 50, 20, 99, 75 };
+
+		int[][] score = { t1, t2, t3, t4, t5, t6 };
+		int[] count = new int[8];
+		for (int i = 0; i < score.length; i++) {
+			int max = score[i][0];
+			for (int j = 0; j < score[i].length; j++) {
+				if (max < score[i][j]) {
+					max = score[i][j];
+				}
+			}
+			for (int k = 0; k < score[i].length; k++) {
+				if (max == score[i][k]) {
+					count[k] = count[k] + 1;
+				}
+			}
+		}
+
+		for (int i = 0; i < count.length; i++) {
+			System.out.println((i + 1) + "號考最高分的次數" + count[i]);
+		}
+		// 4,8,1,2,1,3
 	}
 }
