@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class HW_4 {
 	public static void main(String[] args) {
-		score();
+		vowel();
+		
 	}
 
 	// 1.請寫出一隻程式能輸出此陣列所有元素的平均值與大於平均值的元素
@@ -37,13 +38,18 @@ public class HW_4 {
 	// {“mercury”, “venus”, “earth”, “mars”, “jupiter”, “saturn”, “uranus”,
 	// “neptune”}
 	// 請用程式計算出這陣列裡面共有多少個母音(a, e, i, o, u)
-	public static void motherChar() {
+	public static void vowel() {
 		String[] s = { "mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune" };
 		int count = 0;
 		for (int i = 0; i < s.length; i++) {
 			for (int j = 0; j < s[i].length(); j++) {
 				char c = s[i].charAt(j);
-				if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+				switch (c) {
+				case 'a':
+				case 'e':
+				case 'i':
+				case 'o':
+				case 'u':
 					count++;
 				}
 			}
