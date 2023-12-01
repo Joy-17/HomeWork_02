@@ -1,4 +1,4 @@
-package HW5_4;
+package hw5_4;
 
 public class MyRectangleMain {
 	public static void main(String[] args) {
